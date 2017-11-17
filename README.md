@@ -25,3 +25,9 @@ java Main [multiplication] [step mode] [fast mode]
 
 java Main "2*6" 1
 ```
+
+## Contributors
+
+- [Stefan Brunner](https://github.com/thecoder95)
+- Ralph Meier
+- [Pascal Andermatt](https://github.com/pandermatt)
