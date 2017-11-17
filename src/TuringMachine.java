@@ -11,14 +11,23 @@ public class TuringMachine {
     private int counter = 0;
 
     public TuringMachine(String word) {
+        initTapes(word);
+
+        fromTapeOneToTapeTwo();
+        removeMiddle();
+        moveTape2Left();
+        fromTapeTwoToTapeThree();
+        clearTape2();
+
+        printResult();
+    }
+
+    private void initTapes(String word) {
         tape1.initTape(word);
         tape2.initTape(" ");
         tape3.initTape(" ");
 
         printStep();
-
-        fromTapeOneToTapeTwo();
-        fromTapeTwoToTapeThree();
     }
 
     private void fromTapeOneToTapeTwo() {
@@ -31,15 +40,6 @@ public class TuringMachine {
     }
 
     private void fromTapeTwoToTapeThree() {
-
-        if (tape1.readFromTape() == '1') {
-            tape1.writeOnTape(' ', 'R');
-            printStep();
-            counter++;
-        }
-
-        moveTape2Left();
-
         while (tape1.readFromTape() == '0') {
             while (tape2.readFromTape() == '0') {
                 tape3.writeOnTape('0', 'R');
@@ -54,25 +54,13 @@ public class TuringMachine {
 
             moveTape2Left();
         }
+    }
 
-        while (tape2.readFromTape() == '0') {
-            tape2.writeOnTape(' ', 'R');
+    private void removeMiddle() {
+        if (tape1.readFromTape() == '1') {
+            tape1.writeOnTape(' ', 'R');
             printStep();
             counter++;
-        }
-
-        if (!fastMode) {
-            tape1.print();
-            tape2.print();
-            tape3.print();
-
-
-            System.out.println("----------------------------------");
-            System.out.println("Steps: " + counter);
-            tape3.result();
-            System.out.println("-------------------------------------");
-        } else {
-            tape3.resultShort();
         }
     }
 
@@ -92,6 +80,15 @@ public class TuringMachine {
         counter++;
     }
 
+    private void clearTape2() {
+        while (tape2.readFromTape() == '0') {
+            tape2.writeOnTape(' ', 'R');
+            printStep();
+            counter++;
+        }
+    }
+
+
     private void printStep() {
         if (!fastMode) {
             tape1.print();
@@ -105,6 +102,22 @@ public class TuringMachine {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    private void printResult() {
+        if (!fastMode) {
+            tape1.print();
+            tape2.print();
+            tape3.print();
+
+
+            System.out.println("----------------------------------");
+            System.out.println("Steps: " + counter);
+            tape3.result();
+            System.out.println("-------------------------------------");
+        } else {
+            tape3.resultShort();
         }
     }
 }
