@@ -1,10 +1,10 @@
 # Turing Machine (only multiplication)
 
-Fork me on Github: <https://github.com/pandermatt/turing-machine>
-
-A easy implementation of the turing machine
+**A easy implementation of the turing machine**
 
 More about the turing machine: <https://en.wikipedia.org/wiki/Turing_machine>
+
+*Fork me on Github: <https://github.com/pandermatt/turing-machine>*
 
 ## Demo
 
