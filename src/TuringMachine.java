@@ -61,7 +61,7 @@ public class TuringMachine {
             counter++;
         }
 
-        if(!fastMode) {
+        if (!fastMode) {
             tape1.print();
             tape2.print();
             tape3.print();
@@ -71,7 +71,7 @@ public class TuringMachine {
             System.out.println("Steps: " + counter);
             tape3.result();
             System.out.println("-------------------------------------");
-        }else{
+        } else {
             tape3.resultShort();
         }
     }
@@ -93,7 +93,7 @@ public class TuringMachine {
     }
 
     private void printStep() {
-        if(!fastMode) {
+        if (!fastMode) {
             tape1.print();
             tape2.print();
             tape3.print();
