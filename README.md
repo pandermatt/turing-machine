@@ -1,1 +1,3 @@
-# turing-machine
+# Turing Machine
+
+![Demo](demo.gif)
