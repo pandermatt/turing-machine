@@ -37,9 +37,9 @@ Tape 3: [ ]
 - Fast Mode 🐇: disable all `System.out.println`
     - `1` enable fast mode
     - `0` disable fast mode
-
+- Long Print ⏩
 ```
-java Main [multiplication] [step mode] [fast mode]
+java Main [multiplication] [step mode] [fast mode] [long print]
 
 java Main "2*6" 1
 ```
