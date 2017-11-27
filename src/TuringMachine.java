@@ -14,11 +14,10 @@ public class TuringMachine {
     public TuringMachine(String word) {
         initTapes(word);
 
-        fromTapeOneToTapeTwo();
-        removeMiddle();
-        moveTape2Left();
-        fromTapeTwoToTapeThree();
-        clearTape2();
+        q0();
+        q1();
+        q2();
+        q3();
 
         printResult();
     }
@@ -31,51 +30,62 @@ public class TuringMachine {
         printStep();
     }
 
-    private void fromTapeOneToTapeTwo() {
+    private void q0() {
+//        fromTapeOneToTapeTwo
         while (tape1.readFromTape() == '0') {
+            System.out.println("q0");
             tape1.writeOnTape(' ', 'R');
             tape2.writeOnTape('0', 'R');
             printStep();
         }
+
+//        removeMiddle
+        if (tape1.readFromTape() == '1') {
+            System.out.println("q0");
+            tape1.writeOnTape(' ', 'R');
+            printStep();
+        }
     }
 
-    private void fromTapeTwoToTapeThree() {
+    private void q1() {
+//        moveTape2Left
+        System.out.println("q1");
+        tape2.writeOnTape(' ', 'L');
+        printStep();
+
+        while (tape2.readFromTape() == '0') {
+            System.out.println("q1");
+            tape2.writeOnTape('0', 'L');
+            printStep();
+        }
+
+        System.out.println("q1");
+        tape2.writeOnTape(' ', 'R');
+        printStep();
+    }
+
+    private void q2() {
+//        fromTapeTwoToTapeThree
         while (tape1.readFromTape() == '0') {
             while (tape2.readFromTape() == '0') {
+                System.out.println("q2");
                 tape3.writeOnTape('0', 'R');
                 tape2.writeOnTape('0', 'R');
                 printStep();
             }
 
+            System.out.println("q2");
             tape1.writeOnTape(' ', 'R');
             printStep();
 
-            moveTape2Left();
+            q1();
         }
     }
 
-    private void removeMiddle() {
-        if (tape1.readFromTape() == '1') {
-            tape1.writeOnTape(' ', 'R');
-            printStep();
-        }
-    }
-
-    private void moveTape2Left() {
-        tape2.writeOnTape(' ', 'L');
-        printStep();
-
+    private void q3() {
+//        clearTape2
         while (tape2.readFromTape() == '0') {
-            tape2.writeOnTape('0', 'L');
-            printStep();
-        }
-
-        tape2.writeOnTape(' ', 'R');
-        printStep();
-    }
-
-    private void clearTape2() {
-        while (tape2.readFromTape() == '0') {
+            System.out.println("q4");
             tape2.writeOnTape(' ', 'R');
             printStep();
         }
