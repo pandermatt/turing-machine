@@ -12,6 +12,8 @@ More about the turing machine: <https://en.wikipedia.org/wiki/Turing_machine>
 
 ### Keynote
 
+[Keynote (in german)](https://github.com/pandermatt/turing-machine/blob/master/keynote.tpp)
+
 Made with [TPP](http://www.ngolde.de/tpp.html)
 
 ## Implementation
