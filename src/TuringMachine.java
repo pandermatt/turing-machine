@@ -22,6 +22,10 @@ public class TuringMachine {
         printResult();
     }
 
+    /**
+     * Init all tree tapes
+     * @param word the calculation
+     */
     private void initTapes(String word) {
         tape1.initTape(word);
         tape2.initTape(" ");
@@ -30,23 +34,26 @@ public class TuringMachine {
         printStep("q0");
     }
 
+    /**
+     * Copy all zeros from tape one to tape two, then remove the middle one
+     */
     private void q0() {
-//        fromTapeOneToTapeTwo
         while (tape1.readFromTape() == '0') {
             tape1.writeOnTape(' ', 'R');
             tape2.writeOnTape('0', 'R');
             printStep("q0");
         }
 
-//        removeMiddle
         if (tape1.readFromTape() == '1') {
             tape1.writeOnTape(' ', 'R');
             printStep("q0");
         }
     }
 
+    /**
+     * move the header of tape two to the start of all the zeros
+     */
     private void q1() {
-//        moveTape2Left
         tape2.writeOnTape(' ', 'L');
         printStep("q1");
 
@@ -59,8 +66,10 @@ public class TuringMachine {
         printStep("q1");
     }
 
+    /**
+     * for each zero on tape one copy all zeros from tape two to tape tree
+     */
     private void q2() {
-//        fromTapeTwoToTapeThree
         while (tape1.readFromTape() == '0') {
             while (tape2.readFromTape() == '0') {
                 tape3.writeOnTape('0', 'R');
@@ -75,15 +84,20 @@ public class TuringMachine {
         }
     }
 
+    /**
+     * Finally remove all zeros on tape two
+     */
     private void q3() {
-//        clearTape2
         while (tape2.readFromTape() == '0') {
             tape2.writeOnTape(' ', 'R');
             printStep("q4");
         }
     }
 
-
+    /**
+     * Print one step if fast mode is disabled
+     * @param zustand
+     */
     private void printStep(String zustand) {
         counter++;
         if (!fastMode) {
@@ -103,6 +117,9 @@ public class TuringMachine {
         }
     }
 
+    /**
+     * Print the result
+     */
     private void printResult() {
         System.out.println("Steps: " + counter);
         if (!fastMode) {
