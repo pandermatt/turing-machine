@@ -12,13 +12,14 @@ More about the turing machine: <https://en.wikipedia.org/wiki/Turing_machine>
 
 ### Keynote
 
-Made with
+Made with [TPP](http://www.ngolde.de/tpp.html)
 
 ## Implementation
 
-* With Java
+* with Java
 * 3 Tapes
 ```
+//Tapes on first run
 Tape 1: [0, 0, 0, 1, 0, 0]  //3*2
 Tape 2: [ ]
 Tape 3: [ ]
