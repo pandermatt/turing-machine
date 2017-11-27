@@ -44,6 +44,7 @@ Tape 3: [ ]
     - `0` print only content
 - Timeout ⏰
     - timeout between the step
+
 ```
 java Main [multiplication] [step mode] [fast mode] [infinity tape] [timeout]
 
