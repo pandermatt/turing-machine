@@ -27,7 +27,7 @@ public class TuringMachine {
         tape2.initTape(" ");
         tape3.initTape(" ");
 
-        printStep();
+        printStep("q0");
     }
 
     private void q0() {
