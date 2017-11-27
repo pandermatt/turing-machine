@@ -24,6 +24,7 @@ public class TuringMachine {
 
     /**
      * Init all tree tapes
+     *
      * @param word the calculation
      */
     private void initTapes(String word) {
@@ -96,6 +97,7 @@ public class TuringMachine {
 
     /**
      * Print one step if fast mode is disabled
+     *
      * @param zustand
      */
     private void printStep(String zustand) {
@@ -121,19 +123,14 @@ public class TuringMachine {
      * Print the result
      */
     private void printResult() {
+        System.out.println("\nResult");
+        System.out.println("-------------------------------------");
         System.out.println("Steps: " + counter);
         if (!fastMode) {
-            tape1.print();
-            tape2.print();
-            tape3.print();
-
-
-            System.out.println("----------------------------------");
-            System.out.println("Steps: " + counter);
             tape3.result();
-            System.out.println("-------------------------------------");
         } else {
             tape3.resultShort();
         }
+        System.out.println("-------------------------------------");
     }
 }
