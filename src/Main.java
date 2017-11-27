@@ -30,6 +30,15 @@ public class Main {
             System.out.println("Fast Mode 🐇 : " + TuringMachine.fastMode);
         }
 
+        if (args.length > 3) {
+            if (args[3].equals("1"))
+                TuringMachine.longPrint = true;
+            if (args[3].equals("0"))
+                TuringMachine.longPrint = false;
+            System.out.println("Long Print ⏩ : " + TuringMachine.longPrint);
+        }
+
+
         new TuringMachine(calcToString(calculation));
     }
 

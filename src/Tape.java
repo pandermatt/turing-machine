@@ -35,6 +35,14 @@ public class Tape {
     }
 
     public void print() {
+        if (TuringMachine.longPrint) {
+            printLong();
+        } else {
+            printShort();
+        }
+    }
+
+    private void printShort() {
         String headPosition = "         ";
         for (int i = 0; i < readHeader.getPosition(); i++) {
             headPosition += "   ";
@@ -42,6 +50,32 @@ public class Tape {
         headPosition += "⬇";
         System.out.println(headPosition);
         System.out.println(bandName + ": " + Arrays.toString(tape.toArray()));
+    }
+
+    public void printLong() {
+        String headPosition = "        ";
+
+        for (int i = 0; i < 15; i++) {
+            headPosition += "   ";
+        }
+        headPosition += "⬇";
+        System.out.println(headPosition);
+        ArrayList<Character> output = new ArrayList<>();
+        for (int i = readHeader.getPosition() - 15; i < readHeader.getPosition(); i++) {
+            if (i >= 0) {
+                output.add(tape.get(i));
+            } else {
+                output.add(' ');
+            }
+        }
+        for (int i = readHeader.getPosition(); i <= readHeader.getPosition() + 15; i++) {
+            if (i < tape.size()) {
+                output.add(tape.get(i));
+            } else {
+                output.add(' ');
+            }
+        }
+        System.out.println(bandName + ": " + Arrays.toString(output.toArray()));
     }
 
     public void result() {

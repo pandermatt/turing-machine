@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 public class TuringMachine {
     public static boolean stepMode = false;
     public static boolean fastMode = false;
+    public static boolean longPrint = false;
     public static int timeout = 500;
     private Tape tape1 = new Tape(1);
     private Tape tape2 = new Tape(2);
