@@ -8,11 +8,9 @@ More about the turing machine: <https://en.wikipedia.org/wiki/Turing_machine>
 
 ## Demo
 
-<div>
-  <a href="https://www.youtube.com/watch?v=aHOqqASOnk4"><img src="https://img.youtube.com/vi/aHOqqASOnk4/0.jpg" alt="IMAGE ALT TEXT"></a>
-</div>
-
 ![Demo](demo.gif)
+
+Full Demo on [YouTube](https://www.youtube.com/watch?v=aHOqqASOnk4)
 
 ### Keynote
 
