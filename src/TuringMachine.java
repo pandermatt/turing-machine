@@ -35,7 +35,6 @@ public class TuringMachine {
             tape1.writeOnTape(' ', 'R');
             tape2.writeOnTape('0', 'R');
             printStep();
-            counter++;
         }
     }
 
@@ -45,12 +44,10 @@ public class TuringMachine {
                 tape3.writeOnTape('0', 'R');
                 tape2.writeOnTape('0', 'R');
                 printStep();
-                counter++;
             }
 
             tape1.writeOnTape(' ', 'R');
             printStep();
-            counter++;
 
             moveTape2Left();
         }
@@ -60,37 +57,34 @@ public class TuringMachine {
         if (tape1.readFromTape() == '1') {
             tape1.writeOnTape(' ', 'R');
             printStep();
-            counter++;
         }
     }
 
     private void moveTape2Left() {
         tape2.writeOnTape(' ', 'L');
         printStep();
-        counter++;
 
         while (tape2.readFromTape() == '0') {
             tape2.writeOnTape('0', 'L');
             printStep();
-            counter++;
         }
 
         tape2.writeOnTape(' ', 'R');
         printStep();
-        counter++;
     }
 
     private void clearTape2() {
         while (tape2.readFromTape() == '0') {
             tape2.writeOnTape(' ', 'R');
             printStep();
-            counter++;
         }
     }
 
 
     private void printStep() {
+        counter++;
         if (!fastMode) {
+            System.out.println("Steps: " + counter);
             tape1.print();
             tape2.print();
             tape3.print();
@@ -106,6 +100,7 @@ public class TuringMachine {
     }
 
     private void printResult() {
+        System.out.println("Steps: " + counter);
         if (!fastMode) {
             tape1.print();
             tape2.print();
