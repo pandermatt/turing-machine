@@ -8,7 +8,9 @@ More about the turing machine: <https://en.wikipedia.org/wiki/Turing_machine>
 
 ## Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aHOqqASOnk4" frameborder="0" gesture="media" allowfullscreen></iframe>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=aHOqqASOnk4"><img src="https://img.youtube.com/vi/aHOqqASOnk4/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
 
 ![Demo](demo.gif)
 
