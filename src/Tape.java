@@ -35,7 +35,7 @@ public class Tape {
     }
 
     public void print() {
-        if (TuringMachine.longPrint) {
+        if (TuringMachine.infMode) {
             printLong();
         } else {
             printShort();

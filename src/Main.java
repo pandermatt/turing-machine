@@ -32,10 +32,10 @@ public class Main {
 
         if (args.length > 3) {
             if (args[3].equals("1"))
-                TuringMachine.longPrint = true;
+                TuringMachine.infMode = true;
             if (args[3].equals("0"))
-                TuringMachine.longPrint = false;
-            System.out.println("Long Print ⏩ \t: " + TuringMachine.longPrint);
+                TuringMachine.infMode = false;
+            System.out.println("Infinity Tape ⏩\t: " + TuringMachine.infMode);
         }
 
         if (args.length > 4) {

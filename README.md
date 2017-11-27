@@ -37,13 +37,13 @@ Tape 3: [ ]
 - Fast Mode 🐇: disable all `System.out.println`
     - `1` enable fast mode
     - `0` disable fast mode
-- Long Print ⏩
+- Infinity Tape ⏩
     - `1` print as infinity tape
     - `0` print only content
 - Timeout ⏰
     - timeout between the step
 ```
-java Main [multiplication] [step mode] [fast mode] [long print] [timeout]
+java Main [multiplication] [step mode] [fast mode] [infinity tape] [timeout]
 
 java Main "2*6" 1
 ```

@@ -2,8 +2,8 @@ import java.util.concurrent.TimeUnit;
 
 public class TuringMachine {
     public static boolean stepMode = false;
-    public static boolean fastMode = false;
-    public static boolean longPrint = false;
+    public static boolean fastMode = true;
+    public static boolean infMode = false;
     public static int timeout = 500;
     public static String calculation;
     private Tape tape1 = new Tape(1);
@@ -112,7 +112,7 @@ public class TuringMachine {
 
             System.out.println("Step Mode 🐢 \t: " + TuringMachine.stepMode);
             System.out.println("Fast Mode 🐇 \t: " + TuringMachine.fastMode);
-            System.out.println("Long Print ⏩ \t: " + TuringMachine.longPrint);
+            System.out.println("Infinity Tape ⏩\t: " + TuringMachine.infMode);
             System.out.println("Timeout ⏰ \t: " + TuringMachine.timeout);
             System.out.println("-----------------");
             System.out.println("Zustand: " + zustand);
