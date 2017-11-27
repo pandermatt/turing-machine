@@ -5,6 +5,7 @@ public class TuringMachine {
     public static boolean fastMode = false;
     public static boolean longPrint = false;
     public static int timeout = 500;
+    public static String calculation;
     private Tape tape1 = new Tape(1);
     private Tape tape2 = new Tape(2);
     private Tape tape3 = new Tape(3);
@@ -103,6 +104,17 @@ public class TuringMachine {
     private void printStep(String zustand) {
         counter++;
         if (!fastMode) {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+
+            System.out.println("\n\n\n\n\nTURING MACHINE 🎰 \t" + TuringMachine.calculation);
+            System.out.println("");
+
+            System.out.println("Step Mode 🐢 \t: " + TuringMachine.stepMode);
+            System.out.println("Fast Mode 🐇 \t: " + TuringMachine.fastMode);
+            System.out.println("Long Print ⏩ \t: " + TuringMachine.longPrint);
+            System.out.println("Timeout ⏰ \t: " + TuringMachine.timeout);
+            System.out.println("-----------------");
             System.out.println("Zustand: " + zustand);
             System.out.println("Steps: " + counter);
             tape1.print();

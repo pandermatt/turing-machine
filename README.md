@@ -38,8 +38,12 @@ Tape 3: [ ]
     - `1` enable fast mode
     - `0` disable fast mode
 - Long Print ⏩
+    - `1` print as infinity tape
+    - `0` print only content
+- Timeout ⏰
+    - timeout between the step
 ```
-java Main [multiplication] [step mode] [fast mode] [long print]
+java Main [multiplication] [step mode] [fast mode] [long print] [timeout]
 
 java Main "2*6" 1
 ```

@@ -19,7 +19,7 @@ public class Main {
                 TuringMachine.stepMode = true;
             if (args[1].equals("0"))
                 TuringMachine.stepMode = false;
-            System.out.println("Step Mode 🐢 : " + TuringMachine.stepMode);
+            System.out.println("Step Mode 🐢 \t: " + TuringMachine.stepMode);
         }
 
         if (args.length > 2) {
@@ -27,7 +27,7 @@ public class Main {
                 TuringMachine.fastMode = true;
             if (args[2].equals("0"))
                 TuringMachine.fastMode = false;
-            System.out.println("Fast Mode 🐇 : " + TuringMachine.fastMode);
+            System.out.println("Fast Mode 🐇 \t: " + TuringMachine.fastMode);
         }
 
         if (args.length > 3) {
@@ -35,9 +35,15 @@ public class Main {
                 TuringMachine.longPrint = true;
             if (args[3].equals("0"))
                 TuringMachine.longPrint = false;
-            System.out.println("Long Print ⏩ : " + TuringMachine.longPrint);
+            System.out.println("Long Print ⏩ \t: " + TuringMachine.longPrint);
         }
 
+        if (args.length > 4) {
+            TuringMachine.timeout = Integer.parseInt(args[4]);
+            System.out.println("Timeout ⏰ \t: " + TuringMachine.timeout);
+        }
+
+        TuringMachine.calculation = calculation;
 
         new TuringMachine(calcToString(calculation));
     }
