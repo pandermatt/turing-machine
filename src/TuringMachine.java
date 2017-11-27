@@ -33,50 +33,43 @@ public class TuringMachine {
     private void q0() {
 //        fromTapeOneToTapeTwo
         while (tape1.readFromTape() == '0') {
-            System.out.println("q0");
             tape1.writeOnTape(' ', 'R');
             tape2.writeOnTape('0', 'R');
-            printStep();
+            printStep("q0");
         }
 
 //        removeMiddle
         if (tape1.readFromTape() == '1') {
-            System.out.println("q0");
             tape1.writeOnTape(' ', 'R');
-            printStep();
+            printStep("q0");
         }
     }
 
     private void q1() {
 //        moveTape2Left
-        System.out.println("q1");
         tape2.writeOnTape(' ', 'L');
-        printStep();
+        printStep("q1");
 
         while (tape2.readFromTape() == '0') {
-            System.out.println("q1");
             tape2.writeOnTape('0', 'L');
-            printStep();
+            printStep("q1");
         }
 
-        System.out.println("q1");
         tape2.writeOnTape(' ', 'R');
-        printStep();
+        printStep("q1");
     }
 
     private void q2() {
 //        fromTapeTwoToTapeThree
         while (tape1.readFromTape() == '0') {
             while (tape2.readFromTape() == '0') {
-                System.out.println("q2");
                 tape3.writeOnTape('0', 'R');
                 tape2.writeOnTape('0', 'R');
-                printStep();
+                printStep("q2");
             }
 
-            System.out.println("q2");
             tape1.writeOnTape(' ', 'R');
-            printStep();
+            printStep("q2");
 
             q1();
         }
@@ -85,16 +78,16 @@ public class TuringMachine {
     private void q3() {
 //        clearTape2
         while (tape2.readFromTape() == '0') {
-            System.out.println("q4");
             tape2.writeOnTape(' ', 'R');
-            printStep();
+            printStep("q4");
         }
     }
 
 
-    private void printStep() {
+    private void printStep(String zustand) {
         counter++;
         if (!fastMode) {
+            System.out.println("Zustand: " + zustand);
             System.out.println("Steps: " + counter);
             tape1.print();
             tape2.print();
