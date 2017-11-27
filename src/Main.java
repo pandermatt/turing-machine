@@ -19,7 +19,7 @@ public class Main {
                 TuringMachine.stepMode = true;
             if (args[1].equals("0"))
                 TuringMachine.stepMode = false;
-            System.out.println("Step Mode: " + TuringMachine.stepMode);
+            System.out.println("Step Mode 🐢 : " + TuringMachine.stepMode);
         }
 
         if (args.length > 2) {
@@ -27,7 +27,7 @@ public class Main {
                 TuringMachine.fastMode = true;
             if (args[2].equals("0"))
                 TuringMachine.fastMode = false;
-            System.out.println("Fast Mode: " + TuringMachine.fastMode);
+            System.out.println("Fast Mode 🐇 : " + TuringMachine.fastMode);
         }
 
         new TuringMachine(calcToString(calculation));

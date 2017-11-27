@@ -46,10 +46,10 @@ public class Tape {
 
     public void result() {
         System.out.println(bandName + ": " + Arrays.toString(tape.toArray()));
-        System.out.println("Result: " + (tape.size() - 1));
+        System.out.println("Result 🎉 : " + (tape.size() - 1));
     }
 
     public void resultShort() {
-        System.out.println("Result: " + (tape.size() - 1));
+        System.out.println("Result 🎉 : " + (tape.size() - 1));
     }
 }
