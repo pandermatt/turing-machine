@@ -92,7 +92,7 @@ public class TuringMachine {
     private void q3() {
         while (tape2.readFromTape() == '0') {
             tape2.writeOnTape(' ', 'R');
-            printStep("q4");
+            printStep("q3");
         }
     }
 
