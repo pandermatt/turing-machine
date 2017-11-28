@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Tape {
-    private final String bandName;
+    private final String tapeName;
     private ArrayList<Character> tape = new ArrayList<>();
 
     private ReadHeader readHeader = new ReadHeader(0);
 
-    public Tape(int bandNummer) {
-        bandName = "Band " + bandNummer;
+    public Tape(int tapeNummer) {
+        tapeName = "Tape " + tapeNummer;
     }
 
     public void initTape(String word) {
@@ -49,7 +49,7 @@ public class Tape {
         }
         headPosition += "⬇";
         System.out.println(headPosition);
-        System.out.println(bandName + ": " + Arrays.toString(tape.toArray()));
+        System.out.println(tapeName + ": " + Arrays.toString(tape.toArray()));
     }
 
     public void printLong() {
@@ -75,11 +75,11 @@ public class Tape {
                 output.add(' ');
             }
         }
-        System.out.println(bandName + ": " + Arrays.toString(output.toArray()));
+        System.out.println(tapeName + ": " + Arrays.toString(output.toArray()));
     }
 
     public void result() {
-        System.out.println(bandName + ": " + Arrays.toString(tape.toArray()));
+        System.out.println(tapeName + ": " + Arrays.toString(tape.toArray()));
         System.out.println("Result 🎉 : " + (tape.size() - 1));
     }
 

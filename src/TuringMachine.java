@@ -99,9 +99,9 @@ public class TuringMachine {
     /**
      * Print one step if fast mode is disabled
      *
-     * @param zustand
+     * @param state
      */
-    private void printStep(String zustand) {
+    private void printStep(String state) {
         counter++;
         if (!fastMode) {
             System.out.print("\033[H\033[2J");
@@ -115,7 +115,7 @@ public class TuringMachine {
             System.out.println("Infinity Tape ⏩\t: " + TuringMachine.infMode);
             System.out.println("Timeout ⏰ \t: " + TuringMachine.timeout);
             System.out.println("-----------------");
-            System.out.println("Zustand: " + zustand);
+            System.out.println("State: " + state);
             System.out.println("Steps: " + counter);
             tape1.print();
             tape2.print();
