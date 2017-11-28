@@ -13,7 +13,10 @@ Band 2: [ ]
 Band 3: [ ]
 ---
 
-* Step Mode 🐢  and Fast Mode 🐇
+* Step Mode 🐢  und Fast Mode 🐇
+---
+
+* 4 Zustände
 
 --newpage
 
