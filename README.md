@@ -8,6 +8,8 @@ More about the turing machine: <https://en.wikipedia.org/wiki/Turing_machine>
 
 ## Demo
 
+![Turing Machine](ScreenShot.png)
+
 ![Demo](demo.gif)
 
 Full Demo on [YouTube](https://www.youtube.com/watch?v=aHOqqASOnk4)
