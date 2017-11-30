@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Tape {
     private final String tapeName;
@@ -84,7 +85,7 @@ public class Tape {
     }
 
     public int countZero() {
-        return (tape.size() - 1);
+        return Collections.frequency(tape, '0');
     }
 
     public void resultShort() {

@@ -120,7 +120,26 @@ public class TuringMachine {
             tape1.print();
             tape2.print();
             tape3.print();
-            System.out.println("\nCurrent Result: " + tape3.countZero());
+            int actual = tape3.countZero();
+            int prediction = tape1.countZero() * tape2.countZero() + tape3.countZero();
+            System.out.println("\nStats for nerds\nCurrent Result: " + actual);
+            System.out.println("Prediction: " + prediction);
+
+            double progress = 0;
+            if (prediction > 0)
+                progress = ((actual * 1.0) / (prediction * 1.0)) * 100;
+
+            System.out.println("Progress: " + (int) progress + "%");
+            System.out.print("[");
+            for (int i = 0; i < 100; i++) {
+                if (progress > i) {
+                    System.out.print("=");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("]");
+            System.out.println("\n");
 
             System.out.println("-----------------");
             if (stepMode) {
