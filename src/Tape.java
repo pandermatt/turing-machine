@@ -80,10 +80,14 @@ public class Tape {
 
     public void result() {
         System.out.println(tapeName + ": " + Arrays.toString(tape.toArray()));
-        System.out.println("Result 🎉 : " + (tape.size() - 1));
+        System.out.println("Result 🎉 : " + countZero());
+    }
+
+    public int countZero() {
+        return (tape.size() - 1);
     }
 
     public void resultShort() {
-        System.out.println("Result 🎉 : " + (tape.size() - 1));
+        System.out.println("Result 🎉 : " + countZero());
     }
 }

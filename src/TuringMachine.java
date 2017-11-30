@@ -120,6 +120,8 @@ public class TuringMachine {
             tape1.print();
             tape2.print();
             tape3.print();
+            System.out.println("\nCurrent Result: " + tape3.countZero());
+
             System.out.println("-----------------");
             if (stepMode) {
                 try {
