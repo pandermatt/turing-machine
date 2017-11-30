@@ -10,9 +10,8 @@ More about the turing machine: <https://en.wikipedia.org/wiki/Turing_machine>
 
 ![Turing Machine](ScreenShot.png)
 
-![Demo](demo.gif)
-
 [![Demo Youtube](https://j.gifs.com/1rGz60.gif)](https://www.youtube.com/watch?v=aHOqqASOnk4)
+
 Full Demo on [YouTube](https://www.youtube.com/watch?v=aHOqqASOnk4)
 
 ### Keynote
