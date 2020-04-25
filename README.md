@@ -56,5 +56,5 @@ java Main "2*6" 1
 ## Contributors
 
 - [Stefan Brunner](https://github.com/thecoder95)
-- Ralph Meier
+- [Ralph Meier](https://github.com/Wreck-It-Ralph)
 - [Pascal Andermatt](https://github.com/pandermatt)
